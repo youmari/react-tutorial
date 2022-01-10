@@ -48,19 +48,24 @@ class TodoContainer extends Component {
 
   addTodoItem = (title) => {
     this.setState({
-      todos: [...this.state.todos, { id: uuidv4(), title: title, completed: false }],
+      todos: [
+        ...this.state.todos,
+        { id: uuidv4(), title: title, completed: false },
+      ],
     });
   };
   render() {
     return (
-      <div>
-        <Header />
-        <InputTodo addTodoProps={this.addTodoItem} />
-        <TodosList
-          todos={this.state.todos}
-          handleChangeProps={this.handleChange}
-          deleteTodoProps={this.delTodo}
-        />
+      <div className="container">
+        <div className="inner">
+          <Header />
+          <InputTodo addTodoProps={this.addTodoItem} />
+          <TodosList
+            todos={this.state.todos}
+            handleChangeProps={this.handleChange}
+            deleteTodoProps={this.delTodo}
+          />
+        </div>
       </div>
     );
   }
