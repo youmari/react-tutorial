@@ -1,7 +1,7 @@
 # React-tutorial
 # Todo List web app
 
-> Todo list app where you can add , delete  the tasks built with react.
+> Todo list app where you can add ,delete  the tasks built with react.
 
 
 ## Built With
